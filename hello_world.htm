@@ -12,6 +12,16 @@
     <script>
         let myText = 'hello, js!';
         alert(myText);
+
+        function getDistance(speed, time) {
+            let distance = speed * time;
+            return distance;
+        }
+        let distance = getDistance(12, 8);
+        function showDistance(distance) {
+            alert(distance);
+        }
+        showDistance(distance);
     </script>
 </body>
 
