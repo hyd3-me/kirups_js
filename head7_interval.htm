@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Show me some text!</title>
+</head>
+
+<body>
+    <script>
+        let thingToPrint = "";
+        function drawText() {
+            thingToPrint += "#";
+            document.writeln(thingToPrint);
+        }
+        setInterval(drawText, 9000);
+    </script>
+</body>
+
+</html>
