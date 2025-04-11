@@ -223,4 +223,27 @@ let days = "Monday,Tuesday,Wednesday,Thursday,Friday, Saturday,Sunday";
 let splitWords = days.split(",");
 console.log(splitWords[6]); // Sunday
 
+let question = "I wonder what the pigs did to make these birds so
+angry?";
+console.log(question.indexOf("pigs")); // 18
 
+let question = "I wonder what the pigs did to make these birds so
+angry?";
+console.log(question.indexOf("z")); // -1
+
+let question = "How much wood could a woodchuck chuck if
+a woodchuck could chuck wood?";
+console.log(question.lastIndexOf("wood")); // 65
+
+let question = "How much wood could a woodchuck chuck if
+a woodchuck could chuck wood?";
+console.log(question.indexOf("wood", 30)); // 43
+
+let phrase = "There are 3 little pigs.";
+let regexp = /[0-9]/;
+let numbers = phrase.match(regexp);
+console.log(numbers[0]); // 3
+
+let phrase = "My name is Bond. James Bond.";
+console.log(phrase.toUpperCase()); // MY NAME IS BOND. JAMES BOND.
+console.log(phrase.toLowerCase()); // my name is bond. james bond.
