@@ -247,3 +247,9 @@ console.log(numbers[0]); // 3
 let phrase = "My name is Bond. James Bond.";
 console.log(phrase.toUpperCase()); // MY NAME IS BOND. JAMES BOND.
 console.log(phrase.toLowerCase()); // my name is bond. james bond.
+
+
+head 15
+
+let greeting = "Hi, everybody!!!";
+let shout = greeting.toUpperCase(); /
