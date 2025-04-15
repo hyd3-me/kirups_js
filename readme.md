@@ -252,4 +252,13 @@ console.log(phrase.toLowerCase()); // my name is bond. james bond.
 head 15
 
 let greeting = "Hi, everybody!!!";
-let shout = greeting.toUpperCase(); /
+let shout = greeting.toUpperCase();
+
+let game = "Dragon Age: Origins";
+console.log("Length is: " + game.length);
+let gameObject = new String("Dragon Age:Origins");
+console.log(typeof game); // строка
+console.log(typeof game.length); // число
+console.log(typeof gameObject); // объект
+
+
