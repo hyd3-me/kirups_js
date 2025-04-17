@@ -262,3 +262,5 @@ console.log(typeof game.length); // число
 console.log(typeof gameObject); // объект
 
 
+head 16 numbers
+
