@@ -267,3 +267,6 @@ head 16 numbers
 let pi = 3.14159;
 let color = 0xFF;
 let massOfEarth = 5.9742e+24;
+
+let temperature = -42;
+
