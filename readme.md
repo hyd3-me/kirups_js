@@ -276,3 +276,6 @@ let doublePi = 2*3.14159;
 let subtractItem = 50 — 25;
 let remainder = total % 7;
 let more = (1 + average * 10) / 5;
+
+let leet = 0o2471;
+let leet = 0x539;
