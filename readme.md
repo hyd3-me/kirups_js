@@ -279,3 +279,6 @@ let more = (1 + average * 10) / 5;
 
 let leet = 0o2471;
 let leet = 0x539;
+
+let myLoveForYou = Infinity * 2;
+
