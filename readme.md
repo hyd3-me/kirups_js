@@ -281,4 +281,4 @@ let leet = 0o2471;
 let leet = 0x539;
 
 let myLoveForYou = Infinity * 2;
-
+let nope = 1920 / "blah";
