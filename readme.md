@@ -270,6 +270,7 @@ let massOfEarth = 5.9742e+24;
 
 let temperature = -42;
 
+#operatotors
 let total = 4 + 26;
 let average = total / 2;
 let doublePi = 2*3.14159;
@@ -277,8 +278,50 @@ let subtractItem = 50 — 25;
 let remainder = total % 7;
 let more = (1 + average * 10) / 5;
 
+# oct
 let leet = 0o2471;
+# hex
 let leet = 0x539;
 
 let myLoveForYou = Infinity * 2;
 let nope = 1920 / "blah";
+
+# Math
+Math.E
+Math.LN2
+Math.LN10
+Math.LOG2E
+Math.LOG10E
+Math.PI
+Math.SQRT1_2
+Math.SQRT2
+
+function getCircumference(radius) {
+return 2 * Math.PI * radius;
+}
+console.log(getCircumference(2));
+
+Math.floor(.5); // 0
+Math.ceil(.5); // 1
+Math.round(.5); // 1
+Math.floor(3.14); // 3
+Math.round(3.14); // 3
+Math.ceil(3.14); // 4
+Math.floor(5.9); // 5
+Math.round(5.9); // 6
+Math.ceil(5.9); // 6
+
+Math.cos(0); // 1
+Math.sin(0); // 0
+Math.tan(Math.PI / 4); // 1
+Math.cos(Math.PI); // 1
+Math.cos(4 * Math.PI); // 1
+
+Math.pow(2, 4); //эквивалент 2^4 (или 2 * 2 * 2 * 2)
+Math.exp(3); //эквивалент Math.E^3
+Math.sqrt(16); //4
+
+Math.abs(37); //37
+Math.abs(-6); //6
+
+let randomNumber = Math.random() * 100;
