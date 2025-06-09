@@ -405,3 +405,85 @@ get details() {
 return "Name: " + this.name + ", Age: " + this.age;
 }
 }
+
+
+# head 18 Objects
+
+let funnyGuy = {};
+funnyGuy.firstName = "Conan";
+let funnyFirstName = funnyGuy.firstName;
+
+## alternaative way
+funnyGuy["firstName"] = "Conan";
+funnyGuy["lastName"] = "O'Brien";
+
+let myObject = {};
+for (let i = 0; i < 5; i++) {
+let propertyName = "data" + i;
+myObject[propertyName] = Math.random() * 100;
+}
+
+let funnyGuy = {
+firstName: "Conan",
+lastName: "O'Brien"
+};
+
+let colors = {
+header: "blue",
+footer: "gray",
+content: {
+title: "black",
+body: "darkgray",
+signature: "light blue"
+}
+};
+
+## remove props
+
+delete colors.footer;
+// или
+delete colors["footer"];
+
+colors.footer = undefined;
+// или
+colors["footer"] = undefined;
+
+let funnyGuy = {};
+funnyGuy.toString(); // [объект Object]
+
+## prototype
+
+let person = {
+getName: function () {
+return "The name is " + this.firstName + " " + this.lastName;
+}
+};
+let funnyGuy = Object.create(person);
+funnyGuy.firstName = "Conan";
+funnyGuy.lastName = "O'Brien";
+let theDude = Object.create(person);
+theDude.firstName = "Jeffrey";
+theDude.lastName = "Lebowski";
+let detective = Object.create(person);
+detective.firstName = "Adrian";
+detective.lastName = "Monk";
+
+detective.getName(); // Имя Adrian Monk
+
+let person = {
+getName: function () {
+return "The name is " + this.firstName + " " + this.lastName;
+},
+getInitials: function () {
+if (this.firstName && this.lastName) {
+return this.firstName[0] + this.lastName[0];
+}
+}
+};
+
+funnyGuy.getInitials(); // CO
+
+let spaceGuy = Object.create(person);
+spaceGuy.firstName = "Buzz";
+spaceGuy.lastName = "Lightyear";
+console.log(spaceGuy.getName()); // Buzz Lightyear
