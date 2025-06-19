@@ -487,3 +487,39 @@ let spaceGuy = Object.create(person);
 spaceGuy.firstName = "Buzz";
 spaceGuy.lastName = "Lightyear";
 console.log(spaceGuy.getName()); // Buzz Lightyear
+
+# head 19 extands base Objecst
+
+function shuffle(input) {
+for (let i = input.length — 1; i >= 0; i--) {
+let randomIndex = Math.floor(Math.random() * (i + 1));
+let itemAtIndex = input[randomIndex];
+input[randomIndex] = input[i];
+input[i] = itemAtIndex;
+}
+return input;
+}
+
+Array.prototype.shuffle = function () {
+let input = this;
+for (let i = input.length — 1; i >= 0; i--) {
+let randomIndex = Math.floor(Math.random() * (i + 1));
+let itemAtIndex = input[randomIndex];
+input[randomIndex] = input[i];
+input[i] = itemAtIndex;
+}
+return input;
+}
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+numbers.shuffle();
+
+Array.prototype.slice = function () {
+let input = this;
+input[0] = "This is an awesome example!";
+return input;
+}
+let tempArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+tempArray.slice();
+// и результат будет...
+console.log(tempArray);
