@@ -646,3 +646,59 @@ console.log(thePotato);
 return thePotato;
 }
 }
+
+
+# head 21 logic operators
+
+## boolean
+
+let sunny = false;
+let traffic = true;
+
+let boolObject = new Boolean(false);
+let anotherBool = new Boolean(true);
+
+let bool;
+bool = Boolean(null);
+bool = Boolean(undefined);
+bool = Boolean();
+bool = Boolean(0);
+bool = Boolean("");
+bool = Boolean(false);
+
+let bool;
+bool = Boolean(true);
+bool = Boolean("hello");
+bool = Boolean(new Boolean()); // Внедрение!!!
+bool = Boolean("false"); // "false" — это строка
+bool = Boolean({});
+bool = Boolean(3.14);
+bool = Boolean(["a", "b", "c"]);
+
+let boolObject = new Boolean(false);
+if (boolObject) {
+console.log("Bool, you so crazy!!!");
+}
+
+## Strict inequality (!==)
+
+// true
+function theSolution(answer) {
+if (answer == 42) {
+console.log("You have nothing more to learn!");
+}
+}
+theSolution("42"); // 42 передано как строка
+
+// false
+function theSolution(answer) {
+if (answer === 42) {
+console.log("You have nothing more to learn!");
+}
+}
+theSolution("42"); // 42 передано как строка
+
+// all false
+console.log(new String("A") == new String("A"));
+console.log([1, 2, 3] == [1, 2, 3]);
+console.log({ a: 1 } == { a: 1 });
