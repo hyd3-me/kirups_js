@@ -523,3 +523,126 @@ let tempArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 tempArray.slice();
 // и результат будет...
 console.log(tempArray);
+
+
+# head 20 classes
+
+class Planet {
+}
+let myPlanet = new Planet();
+
+## constructor
+
+class Planet {
+constructor(name, radius) {
+this.name = name;
+this.radius = radius;
+}
+}
+
+let myPlanet = new Planet("Earth", 6378);
+console.log(myPlanet.name); // Earth
+
+function Planet(name, radius) {
+this.name = name;
+this.radius = radius;
+
+};
+let myPlanet = new Planet("Earth", 6378);
+console.log(myPlanet.name); // Earth
+
+class Planet {
+constructor(name, radius) {
+this.name = name;
+this.radius = radius;
+}
+getSurfaceArea() {
+let surfaceArea = 4 * Math.PI * Math.pow(this.radius, 2);
+console.log(surfaceArea + " square km!");
+return surfaceArea;
+}
+}
+
+let earth = new Planet("Earth", 6378);
+earth.getSurfaceArea();
+
+class Planet {
+constructor(name, radius) {
+this.name = name;
+this.radius = radius;
+}
+getSurfaceArea() {
+let surfaceArea = 4 * Math.PI * Math.pow(this.radius, 2);
+console.log(surfaceArea + " square km!");
+return surfaceArea;
+}
+set gravity(value) {
+console.log("Setting value!");
+this._gravity = value;
+}
+get gravity() {
+console.log("Getting value!");
+return this._gravity;
+}
+}
+let earth = new Planet("Earth", 6378);
+earth.gravity = 9.81;
+earth.getSurfaceArea();
+console.log(earth.gravity) // 9.81
+
+## extends objects
+
+class PotatoPlanet {
+constructor(name, radius, potatoType) {
+this.name = name;
+this.radius = radius;
+this.potatoType = potatoType;
+}
+getSurfaceArea() {
+let surfaceArea = 4 * Math.PI * Math.pow(this.radius, 2);
+console.log(surfaceArea + " square km!");
+return surfaceArea;
+}
+getPotatoType() {
+var thePotato = this.potatoType.toUpperCase() + "!!1!!!";
+console.log(thePotato);
+return thePotato;
+}
+set gravity(value) {
+console.log("Setting value!");
+this._gravity = value;
+}
+get gravity() {
+return this._gravity;
+}
+}
+
+class Planet {
+constructor(name, radius) {
+this.name = name;
+this.radius = radius;
+}
+getSurfaceArea() {
+let surfaceArea = 4 * Math.PI * Math.pow(this.radius, 2);
+console.log(surfaceArea + " square km!");
+return surfaceArea;
+}
+set gravity(value) {
+console.log("Setting value!");
+this._gravity = value;
+}
+get gravity() {
+return this._gravity;
+}
+}
+class PotatoPlanet extends Planet {
+constructor(name, width, potatoType) {
+super(name, width);
+this.potatoType = potatoType;
+}
+getPotatoType() {
+let thePotato = this.potatoType.toUpperCase() + "!!1!!!";
+console.log(thePotato);
+return thePotato;
+}
+}
