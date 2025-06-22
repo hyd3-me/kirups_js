@@ -702,3 +702,36 @@ theSolution("42"); // 42 передано как строка
 console.log(new String("A") == new String("A"));
 console.log([1, 2, 3] == [1, 2, 3]);
 console.log({ a: 1 } == { a: 1 });
+
+# head 22. null, undefined
+
+let name = null;
+if (name === null) {
+name = "Peter Griffin";
+} else {
+name = "No name";
+}
+
+let myVariable;
+console.log(myVariable); // undefined
+function doNothing() {
+// watch paint dry
+return;
+}
+
+let weekendPlans = doNothing();
+console.log(weekendPlans); // undefined
+let person = {
+firstName: "Isaac",
+lastName: "Newton"
+}
+console.log(person.title); // undefined
+
+if (myVariable === undefined) {
+// делает что-нибудь
+}
+
+let myVariable;
+if (typeof myVariable === "undefined") {
+console.log("Define me!!!");
+}
