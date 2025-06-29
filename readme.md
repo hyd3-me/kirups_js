@@ -972,3 +972,40 @@ padding: 10px;
 width: 150px;
 font-weight: 800;
 }
+
+
+# head 25: Dive into DOM
+
+## querySelector
+
+<div id="main">
+<div class="pictureContainer">
+<img class="theImage" src="smiley.png" height="300" width="150" />
+</div>
+<div class="pictureContainer">
+<img class="theImage" src="tongue.png" height="300" width="150" />
+</div>
+<div class="pictureContainer">
+<img class="theImage" src="meh.png" height="300" width="150" />
+</div>
+<div class="pictureContainer">
+<img class="theImage" src="sad.png" height="300" width="150" />
+</div>
+</div>
+
+let element = document.querySelector("CSS selector");
+let element = document.querySelector("#main");
+let element = document.querySelector(".pictureContainer");
+
+let elements = document.querySelectorAll("CSS selector");
+
+let images = document.querySelectorAll(".theImage");
+for (let i = 0; i < images.length; i++) {
+let image = images[i];
+console.log(image.getAttribute("src"));
+}
+
+## CSS
+
+let images = document.querySelectorAll("img");
+let images = document.querySelectorAll("img[src='meh.png']");
