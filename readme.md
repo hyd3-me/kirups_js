@@ -1009,3 +1009,64 @@ console.log(image.getAttribute("src"));
 
 let images = document.querySelectorAll("img");
 let images = document.querySelectorAll("img[src='meh.png']");
+
+# head 26: DOM modifyication
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hello...</title>
+<style>
+.highlight {
+font-family: "Arial";
+padding: 30px;
+}
+.summer {
+font-size: 64px;
+color: #0099FF;
+}
+</style>
+</head>
+<body>
+<h1 id="bigMessage" class="highlight summer">What's happening?</h1>
+<script>
+</script>
+</body>
+</html>
+
+## textCntent
+<script>
+    let headingElement = document.querySelector("#bigMessage");
+    headingElement.textContent = "Oppa Gangnam Style!";
+</script>
+
+<img src="images/lol_panda.png" alt="Sneezing Panda!"/>
+<img src="images/cat_cardboard.png" alt="Cat sliding into box!"/>
+<img src="images/dog_tail.png" alt="Dog chasing its tail!"/>
+
+## getAttribure
+<body>
+<h1 id="bigMessage" class="highlight summer">What's happening?</h1>
+<script>
+let headingElement = document.querySelector("h1");
+console.log(headingElement.getAttribute("id")); // bigMessage
+</script>
+</body>
+
+## setAttribute
+<body>
+<h1 id="bigMessage" class="highlight summer">What's happening?</h1>
+<script>
+let headingElement = document.querySelector("h1");
+headingElement.setAttribute("class", "bar foo");
+</script>
+</body>
+
+<body>
+<h1 id="bigMessage" class="highlight summer">What's happening?</h1>
+<script>
+let headingElement = document.querySelector("h1");
+console.log(headingElement.id); // bigMessage
+headingElement.className = "bar foo";
+</script>
+</body>
