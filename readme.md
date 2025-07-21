@@ -1070,3 +1070,62 @@ console.log(headingElement.id); // bigMessage
 headingElement.className = "bar foo";
 </script>
 </body>
+
+# head 27 CSS
+
+let myElement = document.querySelector("#superman");
+myElement.style.backgroundColor = "#D93600";
+
+myElement.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
+myElement.style.transform = `translate3d(${xPos}px, ${yPos}px, 0)`;
+
+
+.disableMenu
+{ display: none;
+}
+
+<ul id="dropDown">
+<li>One</li>
+<li>Two</li>
+<li>Three</li>
+<li>Four</li>
+<li>Five</li>
+<li>Six</li>
+</ul>
+
+<ul class="disableMenu" id="dropDown">
+<li>One</li>
+<li>Two</li>
+<li>Three</li>
+<li>Four</li>
+<li>Five</li>
+<li>Six</li>
+</ul>
+
+classList:
+- add;
+- remove;
+- toggle;
+- contains.
+
+let divElement = document.querySelector("#myDiv");
+divElement.classList.add("bar");
+divElement.classList.add("foo");
+divElement.classList.add("zorb");
+divElement.classList.add("baz");
+console.log(divElement.classList);
+
+let divElement = document.querySelector("#myDiv");
+divElement.classList.remove("foo");
+console.log(divElement.classList);
+
+let divElement = document.querySelector("#myDiv");
+divElement.classList.toggle("foo"); // удаляет foo
+divElement.classList.toggle("foo"); // добавляет foo
+divElement.classList.toggle("foo"); // удаляет foo
+console.log(divElement.classList);
+
+let divElement = document.querySelector("#myDiv");
+if (divElement.classList.contains("bar") == true) {
+// делает что-нибудь
+}
