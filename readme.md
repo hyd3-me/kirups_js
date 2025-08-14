@@ -1129,3 +1129,30 @@ let divElement = document.querySelector("#myDiv");
 if (divElement.classList.contains("bar") == true) {
 // делает что-нибудь
 }
+
+## head 28 DOM navigation
+
+let bodyElement = document.querySelector("body");
+if (bodyElement.firstChild) {
+// Делает что-нибудь интересное
+}
+
+let bodyElement = document.body;
+for (let i = 0; i < bodyElement.children.length; i++) {
+let childElement = bodyElement.children[i];
+document.writeln(childElement.tagName);
+}
+
+function theDOMElementWalker(node) {
+if (node.nodeType == Node.ELEMENT_NODE) {
+console.log(node.tagName);
+node = node.firstChild;
+while (node) {
+theDOMElementWalker(node);
+node = node.nextSibling;
+}
+}
+}
+
+let texasRanger = document.querySelector("#texas");
+theDOMElementWalker(texasRanger);
