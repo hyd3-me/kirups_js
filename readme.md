@@ -1130,7 +1130,7 @@ if (divElement.classList.contains("bar") == true) {
 // делает что-нибудь
 }
 
-## head 28 DOM navigation
+# head 28 DOM navigation
 
 let bodyElement = document.querySelector("body");
 if (bodyElement.firstChild) {
@@ -1156,3 +1156,70 @@ node = node.nextSibling;
 
 let texasRanger = document.querySelector("#texas");
 theDOMElementWalker(texasRanger);
+
+# head 29. create elements
+
+## create
+
+let myElement = document.createElement("p");
+
+let newElement = document.createElement("p");
+let bodyElement = document.querySelector("body");
+let h1Element = document.querySelector("h1");
+newElement.textContent = "I exist entirely in your imagination.";
+bodyElement.insertBefore(newElement, h1Element.nextSibling);
+
+## delete elems
+
+let newElement = document.createElement("p");
+let bodyElement = document.querySelector("body");
+let h1Element = document.querySelector("h1");
+newElement.textContent = "I exist entirely in your imagination.";
+bodyElement.appendChild(newElement);
+newElement.parentNode.removeChild(newElement);
+newElement.remove();
+
+## clone elems
+
+let bodyElement = document.querySelector("body");
+let item = document.querySelector("h1");
+let clonedItem = item.cloneNode(false);
+// добавление клонированного элемента в DOM
+bodyElement.appendChild(clonedItem);
+
+# head 30 browser dev tools
+
+## view DOM
+<!DOCTYPE html>
+<html>
+<head>
+<title>Random Color Generator!</title>
+<style>
+h2 {
+font-family: Arial, Helvetica;
+font-size: 100px;
+color: #FFF;
+text-shadow: 0px 0px 11px #333333;
+margin: 0;
+padding: 30px;
+}
+</style>
+<body style="background-color: rgb(75, 63, 101);">
+<h2>Random
+<br>Color
+<br>Generator</h2>
+<script src="js/randomColor.js"> </script>
+<script>
+let bodyElement = document.querySelector("body");
+bodyElement.style.backgroundColor = getRandomColor();
+</script>
+</body>
+</html>
+
+## js debug
+
+debugging in the browser allows you to repeat the page loading step by step. function by function, using special buttons for this.
+
+## console
+
+in the developer's console, we get access to all objects in the viewport, including the main window.
