@@ -1223,3 +1223,18 @@ debugging in the browser allows you to repeat the page loading step by step. fun
 ## console
 
 in the developer's console, we get access to all objects in the viewport, including the main window.
+
+# head 31 event
+
+source.addEventListener(eventName, eventHandler, false);
+
+document.addEventListener("click", changeColor, false);
+function changeColor(event) {
+// I am important!!!
+}
+
+document.addEventListener("click", changeColor, false);
+document.removeEventListener("click", changeColor, false);
+function changeColor() {
+document.body.style.backgroundColor = "#FFC926";
+}
