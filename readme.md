@@ -1238,3 +1238,42 @@ document.removeEventListener("click", changeColor, false);
 function changeColor() {
 document.body.style.backgroundColor = "#FFC926";
 }
+
+# 32. events. bubbling and capturing
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Events!</title>
+</head>
+<body id="theBody" class="item">
+<div id="one_a" class="item">
+<div id="two" class="item">
+<div id="three_a" class="item">
+<button id="buttonOne" class="item">one</button>
+</div>
+<div id="three_b" class="item">
+<button id="buttonTwo" class="item">two</button>
+<button id="buttonThree" class="item">three</button>
+</div>
+</div>
+</div>
+<div id="one_b" class="item">
+</div>
+<script>
+</script>
+</body>
+</html>
+
+item.addEventListener("click", doSomething, true);
+item.addEventListener("click", doSomething, false);
+
+function handleClick(e) {
+e.stopPropagation();
+// что-нибудь делает
+}
+
+function overrideScrollBehavior(e) {
+e.preventDefault();
+// делает что-нибудь
+}
