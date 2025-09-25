@@ -1277,3 +1277,99 @@ function overrideScrollBehavior(e) {
 e.preventDefault();
 // делает что-нибудь
 }
+
+# head 33. mouseEvent
+
+## click & dbclick
+let button = document.querySelector("#myButton");
+button.addEventListener("click", doSomething, false);
+function doSomething(e) {
+console.log("Mouse clicked on something!");
+}
+
+let button = document.querySelector("#myButton");
+button.addEventListener("dblclick", doSomething, false);
+function doSomething(e) {
+console.log("Mouse clicked on something...twice!");
+}
+
+
+## over & out
+let button = document.querySelector("#myButton");
+button.addEventListener("mouseover", hovered, false);
+button.addEventListener("mouseout", hoveredOut, false);
+function hovered(e) {
+console.log("Hovered!");
+}
+function hoveredOut(e) {
+console.log("Hovered Away!");
+}
+
+## mousedown & mouseup
+let button = document.querySelector("#myButton");
+button.addEventListener("mousedown", mousePressed, false);
+button.addEventListener("mouseup", mouseReleased, false);
+button.addEventListener("click", mouseClicked, false);
+function mousePressed(e) {
+console.log("Mouse is down!");
+}
+function mouseReleased(e) {
+console.log("Mouse is up!");
+}
+function mouseClicked(e) {
+console.log("Mouse is clicked!");
+}
+
+## mousemove
+let button = document.querySelector("#myButton");
+button.addEventListener("mousemove", mouseIsMoving, false);
+function mouseIsMoving(e) {
+console.log("Mouse is on the run!");
+}
+
+## contextmenu
+document.addEventListener("contextmenu", hideMenu, false);
+function hideMenu(e) {
+e.preventDefault();
+}
+
+## mouseEvent property
+document.addEventListener("mousemove", mouseMoving, false);
+function mouseMoving(e) {
+console.log(e.screenX + " " + e.screenY);
+}
+
+let button = document.querySelector("#myButton");
+document.addEventListener("mousemove", mouseMoving, false);
+function mouseMoving(e) {
+console.log(e.clientX + " " + e.clientY);
+}
+
+document.addEventListener("mousedown", buttonPress, false);
+function buttonPress(e) {
+if (e.button == 0) {
+console.log("Left mouse button pressed!");
+} else if (e.button == 1) {
+console.log("Middle mouse button pressed!");
+} else if (e.button == 2) {
+console.log("Right mouse button pressed!");
+} else {
+console.log("Things be crazy up in here!!!");
+}
+}
+
+## mouseWheel
+function mouseWheeling(e) {
+let scrollDirection;
+let wheelData = e.wheelDelta;
+if (wheelData) {
+scrollDirection = wheelData;
+} else {
+scrollDirection = -1 * e.detail;
+}
+if (scrollDirection > 0) {
+console.log("Scrolling up! " + scrollDirection);
+} else {
+console.log("Scrolling down! " + scrollDirection);
+}
+}
