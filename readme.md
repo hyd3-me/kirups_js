@@ -1373,3 +1373,66 @@ console.log("Scrolling up! " + scrollDirection);
 console.log("Scrolling down! " + scrollDirection);
 }
 }
+
+# head 34. KeyboardEvent
+
+window.addEventListener("keydown", dealWithKeyboard, false);
+window.addEventListener("keypress", dealWithKeyboard, false);
+window.addEventListener("keyup", dealWithKeyboard, false);
+function dealWithKeyboard(e) {
+// вызывается, когда услышано любое из событий клавиатуры
+}
+
+window.addEventListener("keydown", checkKeyPressed, false);
+function checkKeyPressed(e) {
+if (e.keyCode == 65) {
+console.log("The 'a' key is pressed.");
+}
+}
+
+window.addEventListener("keypress", checkKeyPressed, false);
+function checkKeyPressed(e) {
+if (e.charCode == 97) {
+console.log("The 'a' key is pressed.");
+}
+}
+
+window.addEventListener("keydown", moveSomething, false);
+function moveSomething(e) {
+switch (e.keyCode) {
+case 37:
+// нажатие влево
+break;
+case 38:
+// нажатие вверх
+break;
+case 39:
+// нажатие вправо
+break;
+case 40:
+// нажатие вниз
+break;
+}
+}
+
+window.addEventListener("keydown", keysPressed, false);
+window.addEventListener("keyup", keysReleased, false);
+let keys = [];
+function keysPressed(e) {
+// сохраняет запись о каждой нажатой клавише
+keys[e.keyCode] = true;
+// Ctrl + Shift + 5
+if (keys[17] && keys[16] && keys[53]) {
+// делает что-нибудь
+}
+// Ctrl + f
+if (keys[17] && keys[70]) {
+// делает что-нибудь
+// предотвращает встроенное поведение браузера
+e.preventDefault();
+}
+}
+function keysReleased(e) {
+// отмечает отпущенные клавиши
+keys[e.keyCode] = false;
+}
