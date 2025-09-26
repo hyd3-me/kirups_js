@@ -1436,3 +1436,73 @@ function keysReleased(e) {
 // отмечает отпущенные клавиши
 keys[e.keyCode] = false;
 }
+
+# head 35. event pagse loader
+
+document.addEventListener("DOMContentLoaded", theDomHasLoaded,
+false);
+window.addEventListener("load", pageFullyLoaded, false);
+function theDomHasLoaded(e) {
+// делает что-нибудь
+}
+function pageFullyLoaded(e) {
+// снова делает что-нибудь
+}
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Example</h1>
+<script>
+console.log("inline 1");
+</script>
+<script src="external1.js"></script>
+<script>
+console.log("inline 2");
+</script>
+<script src="external2.js"></script>
+<script>
+console.log("inline 3");
+</script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+<script src="something.js"></script>
+<h1>Example</h1>
+<p>
+Quisque faucibus, quam sollicitudin pulvinar dignissim, nunc
+velit sodales leo, vel vehicula odio lectus vitae mauris. Sed
+sed magna augue. Vestibulum tristique cursus orci, accumsan
+posuere nunc congue sed. Ut pretium sit amet eros nonconsectetur.
+Quisque tincidunt eleifend justo, quis molestie tellus venenatis
+non. Vivamus interdum urna ut augue rhoncus, eu scelerisque
+orci dignissim. In commodo purus id purus tempus commodo.
+</p>
+<button>Click Me</button>
+</body>
+</html>
+
+## async & defer
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Example</h1>
+<script defer src="external1.js"></script>
+<script>
+console.log("inline 1");
+</script>
+<script src="external2.js"></script>
+<script>
+console.log("inline 2");
+</script>
+<script defer src="external3.js"></script>
+<script>
+console.log("inline 3");
+</script>
+</body>
+</html>
