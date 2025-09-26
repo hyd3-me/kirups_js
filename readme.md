@@ -1506,3 +1506,34 @@ console.log("inline 3");
 </script>
 </body>
 </html>
+
+# head 36. 
+
+## wrong example
+let oneElement = document.querySelector("#one");
+let twoElement = document.querySelector("#two");
+let threeElement = document.querySelector("#three");
+let fourElement = document.querySelector("#four");
+let fiveElement = document.querySelector("#five");
+
+oneElement.addEventListener("click", doSomething, false);
+twoElement.addEventListener("click", doSomething, false);
+threeElement.addEventListener("click", doSomething, false);
+fourElement.addEventListener("click", doSomething, false);
+fiveElement.addEventListener("click", doSomething, false);
+
+function doSomething(e) {
+let clickedItem = e.target.id;
+console.log("Hello " + clickedItem);
+}
+
+## good example
+let theParent = document.querySelector("#theDude");
+theParent.addEventListener("click", doSomething, false);
+function doSomething(e) {
+if (e.target != e.currentTarget) {
+let clickedItem = e.target.id;
+console.log("Hello " + clickedItem);
+}
+e.stopPropagation();
+}
